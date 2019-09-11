@@ -1,0 +1,40 @@
+{
+  "name": "next2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "analyze": "SET \"ANALYZE=true\" && next build",
+    "type-check": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@next/bundle-analyzer": "^9.0.5",
+    "@types/node": "^12.7.5",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^8.1.0",
+    "next": "^9.0.5",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "jest": "^24.9.0",
+    "postcss-css-variables": "^0.13.0",
+    "postcss-easy-import": "^3.0.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0"
+  }
+}

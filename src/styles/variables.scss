@@ -1,0 +1,25 @@
+@import "helpers/helpers";
+
+/**
+BREAKPOINTS
+ */
+/* 
+$xxs:                             unquote(map-deep-get($theme, "breakpoints", "xxs") + "px");
+$xs:                              unquote(map-deep-get($theme, "breakpoints", "xs") + "px");
+$sm:                              unquote(map-deep-get($theme, "breakpoints", "sm") + "px");
+$md:                              unquote(map-deep-get($theme, "breakpoints", "md") + "px");
+$lg:                              unquote(map-deep-get($theme, "breakpoints", "lg") + "px");
+$xl:                              unquote(map-deep-get($theme, "breakpoints", "xl") + "px");
+$xxl:                             unquote(map-deep-get($theme, "breakpoints", "xxl") + "px");
+$xxxl:                            unquote(map-deep-get($theme, "breakpoints", "xxxl") + "px"); */
+
+$xl: 1200px;
+
+:root {
+    --some-color: blue;
+}
+
+/**
+Colors
+ */
+
