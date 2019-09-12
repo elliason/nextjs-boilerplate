@@ -1,8 +1,8 @@
 node_modules
 .next
-
-## output folder of next.js
 out
 
 .idea/
 .vscode
+
+coverage

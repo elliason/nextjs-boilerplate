@@ -22,13 +22,5 @@
     }
   },
   "exclude": ["node_modules", "out", ".next"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/utils/testutil.tsx",
-    "pages/index.tsx",
-    "src/components/layouts/layout.tsx",
-    "src/containers/homepage.tsx"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
