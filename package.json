@@ -13,8 +13,12 @@
     "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint-styles": "stylelint src/styles/**/*.scss src/styles/**/*.css"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "boilerplate",
+    "next.js",
+    "react.js"
+  ],
+  "author": "Elias Ondrej",
   "license": "ISC",
   "dependencies": {
     "@next/bundle-analyzer": "^9.0.5",
