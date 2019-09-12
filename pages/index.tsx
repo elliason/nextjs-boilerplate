@@ -1,5 +1,5 @@
 import Homepage from '@containers/homepage';
-import { withTranslation } from '@utils/i18n';
+import { withTranslation, i18n } from '@utils/i18n';
 
 const Index = (props) => (
     <div>
@@ -7,7 +7,8 @@ const Index = (props) => (
     </div>
 );
 
-Index.getInitialProps = async () => ({
+Index.getInitialProps = async ({ req }) => ({
+    currentLanguage: req ? req.language : i18n.language,
     namespacesRequired: ['common']
 });
 

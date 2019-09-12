@@ -5,10 +5,10 @@ const NextI18NextInstance = new NextI18Next({
     defaultLanguage: 'cz',
     defaultNS: 'common',
     fallbackLng: 'cz',
-    localeSubpaths: {
+    /* localeSubpaths: {
         en: 'english',
         cz: 'czech'
-    },
+    }, */
     otherLanguages: ['en'],
     preload: ['cz']
 });
@@ -16,4 +16,4 @@ const NextI18NextInstance = new NextI18Next({
 export default NextI18NextInstance;
 
 /* Optionally, export class methods as named exports */
-export const { appWithTranslation, withTranslation } = NextI18NextInstance;
+export const { appWithTranslation, withTranslation, Link, Router, i18n } = NextI18NextInstance;

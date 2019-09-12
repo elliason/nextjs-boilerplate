@@ -4,7 +4,7 @@
     "module": "commonjs",
     "outDir": "build/",
     "noEmit": false,
-    "target": "es2017",
+    "target": "es2015",
     "isolatedModules": false
   },
   "include": ["src/server/*.ts", "**/*.ts", "**/*.tsx"]

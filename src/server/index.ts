@@ -26,6 +26,6 @@ const handle = app.getRequestHandler();
         if (err) {
             throw err;
         }
-        console.log(`> Ready on rrr port ${port}`);
+        console.log(`> Ready on port ${port}`);
     });
 })();
