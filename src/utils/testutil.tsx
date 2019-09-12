@@ -1,5 +1,5 @@
 const testutil = () => {
-    console.log("teest");
+    console.log('teest');
 };
 
 export default testutil;

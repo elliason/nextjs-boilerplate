@@ -1,4 +1,4 @@
-import Homepage from "@containers/homepage";
+import Homepage from '@containers/homepage';
 
 const Index = () => (
     <div>

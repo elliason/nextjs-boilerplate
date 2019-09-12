@@ -24,7 +24,7 @@
 
     // If the last key is a map already
     // Warn the user we will be overriding it with $value
-    @if type-of(nth($keys, -1)) == "map" {
+    @if type-of(nth($keys, -1)) == 'map' {
         @warn "The last key you specified is a map; it will be overrided with `#{$value}`.";
     }
 
@@ -71,37 +71,23 @@
 }
 
 // FONT FACE
-@mixin font-face(
-    $name,
-    $path,
-    $weight: null,
-    $style: null,
-    $exts: eot woff otf ttf svg
-) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff otf ttf svg) {
     $src: null;
 
     $extmods: (
-        eot: "?",
-        svg: "#" + str-replace($name, " ", "_")
+        eot: '?',
+        svg: '#' + str-replace($name, ' ', '_')
     );
 
     $formats: (
-        otf: "opentype",
-        ttf: "truetype"
+        otf: 'opentype',
+        ttf: 'truetype'
     );
 
     @each $ext in $exts {
-        $extmod: if(
-            map-has-key($extmods, $ext),
-            $ext + map-get($extmods, $ext),
-            $ext
-        );
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-        $src: append(
-            $src,
-            url(quote($path + "." + $extmod)) format(quote($format)),
-            comma
-        );
+        $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
     }
 
     @font-face {
