@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "analyze": "SET \"ANALYZE=true\" && next build",
     "type-check": "tsc",
-    "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
+    "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint-styles": "stylelint src/styles/**/*.scss src/styles/**/*.css"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "stylelint-scss": "^3.10.1",
     "typescript": "^3.6.3"
   },
   "devDependencies": {
@@ -36,6 +38,7 @@
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-recommended": "^2.2.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.20.0",
     "tslint-react": "^4.0.0"
