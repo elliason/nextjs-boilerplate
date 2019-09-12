@@ -1,16 +1,15 @@
 import NextI18Next from 'next-i18next';
 
 const NextI18NextInstance = new NextI18Next({
-    browserLanguageDetection: false,
-    defaultLanguage: 'cz',
+    browserLanguageDetection: true,
+    defaultLanguage: 'cs',
     defaultNS: 'common',
-    fallbackLng: 'cz',
+    fallbackLng: 'cs',
     /* localeSubpaths: {
-        en: 'english',
-        cz: 'czech'
+        cz: 'cz',
+        en: 'eng'
     }, */
-    otherLanguages: ['en'],
-    preload: ['cz']
+    otherLanguages: ['en']
 });
 
 export default NextI18NextInstance;
