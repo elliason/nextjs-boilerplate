@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "analyze": "SET \"ANALYZE=true\" && next build",
     "type-check": "tsc",
     "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
