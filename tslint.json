@@ -12,9 +12,11 @@
     "no-console": {
       "severity": "warning"
     },
-    "no-submodule-imports": [true, "@utils", "@components", "@containers", "@styles"],
+    "no-submodule-imports": false,
     "jsx-boolean-value": false,
-    "jsx-no-multiline-js": false
+    "jsx-no-multiline-js": false,
+    "trailing-comma": [true, "never"],
+    "interface-over-type-literal": false
   },
   "rulesDirectory": []
 }

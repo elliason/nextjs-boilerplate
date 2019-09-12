@@ -1,9 +1,14 @@
 import Homepage from '@containers/homepage';
+import { withTranslation } from '@utils/i18n';
 
-const Index = () => (
+const Index = (props) => (
     <div>
         <Homepage />
     </div>
 );
 
-export default Index;
+Index.getInitialProps = async () => ({
+    namespacesRequired: ['common']
+});
+
+export default withTranslation('common')(Index);

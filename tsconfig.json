@@ -18,7 +18,8 @@
       "@utils/*": ["./src/utils/*"],
       "@components/*": ["./src/components/*"],
       "@containers/*": ["./src/containers/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@server/*": ["./src/server/*"]
     }
   },
   "exclude": ["node_modules", "out", ".next"],
