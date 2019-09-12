@@ -1,10 +1,12 @@
 import '@styles/styles.scss';
-import testutil from '@utils/testutil';
+import Header from '@components/layouts/header';
+import Footer from '@components/layouts/footer';
 
 const Layout = (props) => (
     <div className="layout">
-        {props.children}
-        {testutil()}
+        <Header />
+        <main>{props.children}</main>
+        <Footer />
     </div>
 );
 

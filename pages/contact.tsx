@@ -1,12 +1,7 @@
-import Homepage from '@containers/homepage';
+import Layout from '@components/layouts/layout';
 import { withTranslation, i18n } from '@utils/i18n';
 
-const ContactPage = (props) => (
-    <div>
-        <Homepage />
-        {console.log(props.currentLanguage)}
-    </div>
-);
+const ContactPage = (props) => <Layout>{console.log(props.currentLanguage, i18n.language)}</Layout>;
 
 ContactPage.getInitialProps = async ({ req }) => ({
     currentLanguage: req ? req.language : i18n.language,
