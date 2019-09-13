@@ -1,7 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import { appWithTranslation } from '@utils/i18n';
-import withReduxStore, { Store } from '@utils/with-redux-store';
+import withReduxStore, { Store } from '@utils/redux/with-redux-store';
 import { Provider } from 'react-redux';
 
 interface Props {
@@ -21,11 +21,11 @@ class MyApp extends App<Props> {
     //   return { ...appProps }
     // }
 
-    static async getInitialProps({ Component, ctx }) {
+    /* static async getInitialProps({ Component, ctx }) {
         return {
             pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
         };
-    }
+    } */
 
     render() {
         const { Component, pageProps, reduxStore } = this.props;

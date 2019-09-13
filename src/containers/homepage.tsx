@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Layout from '@components/layouts/layout';
 import Clock from '@components/clock/clock';
-import { startClock, serverRenderClock } from '../../store';
-import { Dispatchable, mapDispatchToProps } from '@utils/with-redux-store';
+import { startClock, serverRenderClock } from '@utils/redux/store';
+import { Dispatchable, mapDispatchToProps } from '@utils/redux/with-redux-store';
 
 interface Props {}
 
