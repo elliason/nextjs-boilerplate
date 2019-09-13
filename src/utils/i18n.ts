@@ -1,10 +1,12 @@
 import NextI18Next from 'next-i18next';
 
+export const defaultLanguage = 'cs';
+
 const NextI18NextInstance = new NextI18Next({
     browserLanguageDetection: true,
-    defaultLanguage: 'cs',
+    defaultLanguage: defaultLanguage,
     defaultNS: 'common',
-    fallbackLng: 'cs',
+    fallbackLng: defaultLanguage,
     /* localeSubpaths: {
         cz: 'cz',
         en: 'eng'

@@ -4,35 +4,9 @@ import Layout from '@components/layouts/layout';
 import { bindActionCreators } from 'redux';
 
 import Clock from '@components/clock/clock';
-import { startClock, serverRenderClock } from '@components/clock/clock.actions';
-
 import Counter from '@components/counter/counter';
 
-interface IProps {
-    startClock: any;
-    serverRenderClock: any;
-    dispatch: any;
-}
-
-class Homepage extends Component<IProps> {
-    static getInitialProps({ reduxStore, req }) {
-        const isServer = !!req;
-        reduxStore.dispatch(serverRenderClock(isServer));
-
-        return {};
-    }
-
-    private timer: NodeJS.Timer;
-
-    componentDidMount() {
-        const { dispatch } = this.props;
-        this.timer = startClock(dispatch);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timer);
-    }
-
+class Homepage extends Component {
     render() {
         return (
             <div>
@@ -43,14 +17,4 @@ class Homepage extends Component<IProps> {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        dispatch,
-        ...bindActionCreators({ startClock, serverRenderClock }, dispatch)
-    };
-};
-
-export default connect(
-    null,
-    mapDispatchToProps
-)(Homepage);
+export default Homepage;

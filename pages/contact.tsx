@@ -6,7 +6,6 @@ const ContactPage = ({ t, ...props }) => (
         <div>
             <h1>{t('page-title')}</h1>
         </div>
-        {console.log(props.currentLanguage, i18n.language)}
     </Layout>
 );
 

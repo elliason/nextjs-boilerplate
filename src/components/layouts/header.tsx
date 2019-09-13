@@ -1,5 +1,6 @@
 import Nav from '@components/layouts/nav';
 import { withTranslation, i18n } from '@utils/i18n';
+import LanguageSwitch from '@components/languageSwitch/languageSwitchContainer';
 
 const click = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'cs' : 'en');
@@ -30,15 +31,13 @@ const Header = (props) => {
                         <p>{props.t('intro-texts.text-1')}</p>
                         <p>{props.t('intro-texts.text-2')}</p>
                     </div>
-                    <div className="home-block2">
-                        <img src="/static/img/doggo.jpg" />
-                    </div>
                 </div>
-                <div>
+                <LanguageSwitch />
+                {/* <div>
                     <button type="button" onClick={click}>
                         {props.t('change-locale')}
                     </button>
-                </div>
+                </div> */}
             </div>
         </header>
     );

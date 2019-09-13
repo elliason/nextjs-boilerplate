@@ -1,17 +1,20 @@
 import Layout from '@components/layouts/layout';
 import Homepage from '@containers/homepage';
-import { withTranslation, i18n } from '@utils/i18n';
+import { withTranslation } from '@utils/i18n';
+import { serverRenderClock } from '@components/clock/clock.actions';
 
 const Index = (props) => (
     <Layout>
         <Homepage />
-        {console.log(props.currentLanguage, i18n.language)}
     </Layout>
 );
 
-Index.getInitialProps = async ({ req }) => ({
-    currentLanguage: req ? req.language : i18n.language,
-    namespacesRequired: ['common']
-});
+Index.getInitialProps = async ({ reduxStore, req }) => {
+    const isServer = !!req;
+    reduxStore.dispatch(serverRenderClock(isServer));
+    return {
+        namespacesRequired: ['common']
+    };
+};
 
 export default withTranslation('common')(Index);

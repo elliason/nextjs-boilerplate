@@ -22,6 +22,7 @@ class MyApp extends App<Props> {
     // }
 
     /* static async getInitialProps({ Component, ctx }) {
+        ctx.dispatch(getLanguages);
         return {
             pageProps: Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
         };
