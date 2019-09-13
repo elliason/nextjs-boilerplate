@@ -4,6 +4,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { incrementCounter, decrementCounter } from '@components/counter/counter.actions';
 
+interface IProps {
+    counterCount: number;
+    decrementCounter: any;
+    incrementCounter: any;
+}
+
 /* Redux bindings */
 const mapStateToProps = (state) => {
     return {
@@ -18,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-/* class Counter extends Component {
+class Counter extends Component<IProps> {
     render() {
         const { counterCount, incrementCounter, decrementCounter } = this.props;
 
@@ -32,4 +38,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(Counter; */
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter);

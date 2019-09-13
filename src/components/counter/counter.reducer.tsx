@@ -10,7 +10,7 @@ const counterInitialState: ICounter = {
 };
 
 // REDUCER
-export const counter = (state = counterInitialState, action) => {
+export const reducer = (state = counterInitialState, action) => {
     switch (action.type) {
         case counterActionTypes.INCREMENT:
             return { ...state, count: state.count + 1 };

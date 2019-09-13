@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Layout from '@components/layouts/layout';
+import { bindActionCreators } from 'redux';
+
 import Clock from '@components/clock/clock';
 import { startClock, serverRenderClock } from '@components/clock/clock.actions';
-import { bindActionCreators } from 'redux';
+
+import Counter from '@components/counter/counter';
 
 interface IProps {
     startClock: any;
@@ -34,6 +37,7 @@ class Homepage extends Component<IProps> {
         return (
             <div>
                 <Clock />
+                <Counter />
             </div>
         );
     }
