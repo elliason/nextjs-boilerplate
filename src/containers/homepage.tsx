@@ -3,11 +3,15 @@ import { connect } from 'react-redux';
 import Layout from '@components/layouts/layout';
 import Clock from '@components/clock/clock';
 import { startClock, serverRenderClock } from '@components/clock/clock.actions';
-import { Dispatchable, mapDispatchToProps } from '@utils/redux/with-redux-store';
+import { bindActionCreators } from 'redux';
 
-interface Props {}
+interface IProps {
+    startClock: any;
+    serverRenderClock: any;
+    dispatch: any;
+}
 
-class Homepage extends Component<Dispatchable<Props>> {
+class Homepage extends Component<IProps> {
     static getInitialProps({ reduxStore, req }) {
         const isServer = !!req;
         reduxStore.dispatch(serverRenderClock(isServer));
@@ -34,6 +38,13 @@ class Homepage extends Component<Dispatchable<Props>> {
         );
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch,
+        ...bindActionCreators({ startClock, serverRenderClock }, dispatch)
+    };
+};
 
 export default connect(
     null,

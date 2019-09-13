@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { initializeStore, exampleInitialState } from '@utils/redux/store';
+import { initializeStore, initialState } from '@utils/redux/store';
 
 const isServer = typeof window === 'undefined';
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
@@ -25,7 +25,7 @@ type Props = { reduxStore: Store };
 const withReduxStore = (Component: React.ComponentClass<Props>) => {
     return class Redux extends React.Component<Props> {
         static async getInitialProps(appContext) {
-            const reduxStore = getOrCreateStore(exampleInitialState);
+            const reduxStore = getOrCreateStore(initialState);
 
             // Provide the store to getInitialProps of pages
             appContext.ctx.reduxStore = reduxStore;
