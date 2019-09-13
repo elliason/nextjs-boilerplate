@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { State } from '@utils/redux/store';
 
-const mapStateToProps = (state: State) => state;
+const mapStateToProps = (state) => {
+    return state.clock;
+};
 
 const format = (t) => `${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`;
 
 const pad = (n) => (n < 10 ? `0${n}` : n);
 
-const Clock: React.SFC<State> = (props) => {
+const Clock = (props) => {
     const { lastUpdate, light } = props;
     console.log('props clock', props);
     return (
@@ -31,4 +32,4 @@ const Clock: React.SFC<State> = (props) => {
     );
 };
 
-export default connect<State>(mapStateToProps)(Clock);
+export default connect(mapStateToProps)(Clock);

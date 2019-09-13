@@ -10,7 +10,7 @@ const clockInitialState: IClockState = {
     light: false
 };
 
-export const clock = (state = clockInitialState, action) => {
+export const reducer = (state = clockInitialState, action) => {
     switch (action.type) {
         case clockActionTypes.TICK:
             return Object.assign({}, state, {
