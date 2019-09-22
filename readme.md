@@ -12,6 +12,7 @@
 -   uses [TSLint](https://palantir.github.io/tslint/') and [Stylelint](https://stylelint.io) for code quality checks
 -   uses [Webpack Bundle Analyzer](https://github.com/zeit/next.js/tree/canary/packages/next-bundle-analyzer) for analyzing bundled libraries sizes
 -   uses [Jest](https://jestjs.io/) for testing
+-   uses [Express](https://expressjs.com) as custom server and [compression](https://github.com/expressjs/compression) as compression middleware
 
 ## Conventions
 
