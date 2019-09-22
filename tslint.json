@@ -15,7 +15,7 @@
     "no-submodule-imports": false,
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,
-    "trailing-comma": [true, "never"],
+    "trailing-comma": [true, "always"],
     "interface-over-type-literal": false,
     "jsx-no-lambda": {
       "severity": "warning"
