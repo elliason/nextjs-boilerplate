@@ -7,6 +7,7 @@
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
     "start": "cross-env NODE_ENV=production node build/src/server/index.js",
+    "export": "next export",
     "test": "jest",
     "analyze": "SET \"ANALYZE=true\" && next build",
     "type-check": "tsc",
