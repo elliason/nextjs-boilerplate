@@ -13,10 +13,11 @@ const clockInitialState: IClockState = {
 export const reducer = (state = clockInitialState, action) => {
     switch (action.type) {
         case clockActionTypes.TICK:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 lastUpdate: action.ts,
                 light: !!action.light,
-            });
+            };
 
         default:
             return state;
