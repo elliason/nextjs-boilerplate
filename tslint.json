@@ -16,7 +16,11 @@
     "jsx-boolean-value": false,
     "jsx-no-multiline-js": false,
     "trailing-comma": [true, "never"],
-    "interface-over-type-literal": false
+    "interface-over-type-literal": false,
+    "jsx-no-lambda": {
+      "severity": "warning"
+    },
+    "object-literal-sort-keys": false
   },
   "rulesDirectory": []
 }
