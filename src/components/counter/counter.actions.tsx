@@ -1,7 +1,7 @@
 // ACTION TYPES
 export const counterActionTypes = {
     DECREMENT: 'DECREMENT',
-    INCREMENT: 'INCREMENT'
+    INCREMENT: 'INCREMENT',
 };
 
 // ACTION CREATORS

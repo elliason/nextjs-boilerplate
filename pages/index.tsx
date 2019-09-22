@@ -13,7 +13,7 @@ Index.getInitialProps = async ({ reduxStore, req }) => {
     const isServer = !!req;
     reduxStore.dispatch(serverRenderClock(isServer));
     return {
-        namespacesRequired: ['common']
+        namespacesRequired: ['common'],
     };
 };
 

@@ -11,7 +11,7 @@ const ContactPage = ({ t, ...props }) => (
 
 ContactPage.getInitialProps = async ({ req }) => ({
     currentLanguage: req ? req.language : i18n.language,
-    namespacesRequired: ['contact']
+    namespacesRequired: ['contact'],
 });
 
 export default withTranslation('contact')(ContactPage);

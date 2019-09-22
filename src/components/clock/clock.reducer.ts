@@ -7,7 +7,7 @@ export interface IClockState {
 
 const clockInitialState: IClockState = {
     lastUpdate: 0,
-    light: false
+    light: false,
 };
 
 export const reducer = (state = clockInitialState, action) => {
@@ -15,7 +15,7 @@ export const reducer = (state = clockInitialState, action) => {
         case clockActionTypes.TICK:
             return Object.assign({}, state, {
                 lastUpdate: action.ts,
-                light: !!action.light
+                light: !!action.light,
             });
 
         default:

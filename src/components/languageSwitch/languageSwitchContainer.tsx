@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 const mapStateToProps = (state) => {
     return {
         currentLanguage: state.language.language,
-        allLanguages: state.language.allLanguages
+        allLanguages: state.language.allLanguages,
     };
 };
 
@@ -34,5 +34,5 @@ class LanguageSwitchContainer extends Component {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(LanguageSwitchContainer);

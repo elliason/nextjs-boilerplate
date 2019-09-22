@@ -11,7 +11,7 @@ const NextI18NextInstance = new NextI18Next({
         cz: 'cz',
         en: 'eng'
     }, */
-    otherLanguages: ['en']
+    otherLanguages: ['en'],
 });
 
 export default NextI18NextInstance;

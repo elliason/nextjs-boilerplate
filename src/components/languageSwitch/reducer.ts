@@ -4,7 +4,7 @@ import { defaultLanguage, i18n } from '@utils/i18n';
 // INITIAL STATE
 const languageInitialState = {
     language: defaultLanguage,
-    allLanguages: i18n.languages
+    allLanguages: i18n.languages,
 };
 
 // REDUCER

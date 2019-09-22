@@ -37,7 +37,7 @@ const withReduxStore = (Component: React.ComponentClass<Props>) => {
 
             return {
                 ...appProps,
-                initialReduxState: reduxStore.getState()
+                initialReduxState: reduxStore.getState(),
             };
         }
 

@@ -6,7 +6,7 @@ export interface ICounter {
 
 // INITIAL STATE
 const counterInitialState: ICounter = {
-    count: 0
+    count: 0,
 };
 
 // REDUCER

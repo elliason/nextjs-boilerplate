@@ -13,14 +13,14 @@ interface IProps {
 /* Redux bindings */
 const mapStateToProps = (state) => {
     return {
-        counterCount: state.counter.count
+        counterCount: state.counter.count,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         decrementCounter: bindActionCreators(decrementCounter, dispatch),
-        incrementCounter: bindActionCreators(incrementCounter, dispatch)
+        incrementCounter: bindActionCreators(incrementCounter, dispatch),
     };
 };
 
@@ -40,5 +40,5 @@ class Counter extends Component<IProps> {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(Counter);

@@ -15,6 +15,6 @@ export function initializeStore(initialState) {
     return createStore(
         rootReducer,
         initialState,
-        composeWithDevTools(applyMiddleware(thunkMiddleware))
+        composeWithDevTools(applyMiddleware(thunkMiddleware)),
     );
 }

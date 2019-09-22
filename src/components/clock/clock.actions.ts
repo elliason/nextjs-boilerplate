@@ -1,6 +1,6 @@
 // ACTION TYPES
 export const clockActionTypes = {
-    TICK: 'TICK'
+    TICK: 'TICK',
 };
 
 // ACTION CREATORS

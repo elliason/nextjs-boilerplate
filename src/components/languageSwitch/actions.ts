@@ -3,7 +3,7 @@ import { i18n } from '@utils/i18n';
 // ACTION TYPES
 export const languageActionTypes = {
     CHANGE: 'CHANGE',
-    GETLANGS: 'GETLANGS'
+    GETLANGS: 'GETLANGS',
 };
 
 // ACTION CREATORS

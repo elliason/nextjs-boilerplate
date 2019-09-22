@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         dispatch,
-        ...bindActionCreators({ startClock, serverRenderClock }, dispatch)
+        ...bindActionCreators({ startClock, serverRenderClock }, dispatch),
     };
 };
 
@@ -36,7 +36,7 @@ class Clock extends Component<IProps> {
 
     format(t) {
         return `${this.pad(t.getUTCHours())}:${this.pad(t.getUTCMinutes())}:${this.pad(
-            t.getUTCSeconds()
+            t.getUTCSeconds(),
         )}`;
     }
 
@@ -70,5 +70,5 @@ class Clock extends Component<IProps> {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(Clock);
