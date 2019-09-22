@@ -6,8 +6,8 @@ import { incrementCounter, decrementCounter } from '@components/counter/counter.
 
 interface IProps {
     counterCount: number;
-    decrementCounter: any;
-    incrementCounter: any;
+    decrement: () => void;
+    increment: () => void;
 }
 
 /* Redux bindings */
@@ -19,20 +19,20 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        decrementCounter: bindActionCreators(decrementCounter, dispatch),
-        incrementCounter: bindActionCreators(incrementCounter, dispatch),
+        decrement: bindActionCreators(decrementCounter, dispatch),
+        increment: bindActionCreators(incrementCounter, dispatch),
     };
 };
 
 class Counter extends Component<IProps> {
     render() {
-        const { counterCount, incrementCounter, decrementCounter } = this.props;
+        const { counterCount, increment, decrement } = this.props;
 
         return (
             <div className="counter">
                 <p>{counterCount}</p>
-                <button onClick={incrementCounter}>Increment</button>
-                <button onClick={decrementCounter}>Decrement</button>
+                <button onClick={increment}>Increment</button>
+                <button onClick={decrement}>Decrement</button>
             </div>
         );
     }

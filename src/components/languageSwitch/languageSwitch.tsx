@@ -8,7 +8,7 @@ const LanguageSwitch = (props) => {
         changeLanguage(currentLanguage === 'en' ? 'cs' : 'en');
     };
 
-    const switchLanguage = (language) => {
+    const switchLanguage = (language) => (e) => {
         changeLanguage(language);
     };
 
@@ -22,7 +22,7 @@ const LanguageSwitch = (props) => {
                     {allLanguages.map((language, i) => (
                         <a
                             className={clsx('language language--', language)}
-                            onClick={() => switchLanguage(language)}
+                            onClick={switchLanguage(language)}
                             key={i}
                         >
                             <span>{language}</span>

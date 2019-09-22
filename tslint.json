@@ -17,10 +17,10 @@
     "jsx-no-multiline-js": false,
     "trailing-comma": [true, "always"],
     "interface-over-type-literal": false,
-    "jsx-no-lambda": {
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": {
       "severity": "warning"
-    },
-    "object-literal-sort-keys": false
+    }
   },
   "rulesDirectory": []
 }

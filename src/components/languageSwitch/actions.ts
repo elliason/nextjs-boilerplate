@@ -9,7 +9,7 @@ export const languageActionTypes = {
 // ACTION CREATORS
 export const changeLanguage = (language) => (dispatch) => {
     i18n.changeLanguage(language);
-    return dispatch({ type: languageActionTypes.CHANGE, language: language });
+    return dispatch({ type: languageActionTypes.CHANGE, language });
 };
 
 export const getLanguages = () => (dispatch) => {

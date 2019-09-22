@@ -5,15 +5,15 @@ import { initializeStore, initialState } from '@utils/redux/store';
 const isServer = typeof window === 'undefined';
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 
-function getOrCreateStore(initialState) {
+function getOrCreateStore(initState) {
     // Always make a new store if server, otherwise state is shared between requests
     if (isServer) {
-        return initializeStore(initialState);
+        return initializeStore(initState);
     }
 
     // Store in global variable if client
     if (!window[__NEXT_REDUX_STORE__]) {
-        window[__NEXT_REDUX_STORE__] = initializeStore(initialState);
+        window[__NEXT_REDUX_STORE__] = initializeStore(initState);
     }
     return window[__NEXT_REDUX_STORE__];
 }

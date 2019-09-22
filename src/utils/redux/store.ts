@@ -11,10 +11,10 @@ export const initialState = undefined;
 
 const rootReducer = combineReducers({ clock, counter, language });
 
-export function initializeStore(initialState) {
+export function initializeStore(initState) {
     return createStore(
         rootReducer,
-        initialState,
+        initState,
         composeWithDevTools(applyMiddleware(thunkMiddleware)),
     );
 }

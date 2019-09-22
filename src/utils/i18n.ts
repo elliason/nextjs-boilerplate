@@ -4,7 +4,7 @@ export const defaultLanguage = 'cs';
 
 const NextI18NextInstance = new NextI18Next({
     browserLanguageDetection: true,
-    defaultLanguage: defaultLanguage,
+    defaultLanguage,
     defaultNS: 'common',
     fallbackLng: defaultLanguage,
     /* localeSubpaths: {
